@@ -20,3 +20,9 @@ export const getMovie = async (id: number) => {
     `${main_url}/movie/${id}?api_key=6b97dd1be117bedf820a30683b8fb3ae&append_to_response=videos`
   );
 };
+
+export const getMovieCast = async (id: number) => {
+  return await axios.get(
+    `${main_url}/movie/${id}/credits?api_key=6b97dd1be117bedf820a30683b8fb3ae`
+  );
+};

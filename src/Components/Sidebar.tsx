@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Link to="/">
         <img src={Logo2} alt="" className="py-[38px] px-[20px]" />
       </Link>
