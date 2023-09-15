@@ -78,12 +78,12 @@ const MovieDetail = () => {
     (video: { type: string; name: string }) => video.type === "Trailer"
   );
 
-  const date = new Date(movieInfo.release_date);
-  const utcDate = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  // const date = new Date(movieInfo.release_date);
+  // const utcDate = date.toLocaleDateString("en-US", {
+  //   year: "numeric",
+  //   month: "long",
+  //   day: "numeric",
+  // });
 
   if (loading) {
     return (
@@ -141,36 +141,18 @@ const MovieDetail = () => {
                   >
                     {movieInfo.title}
                   </h1>
-                  <h1
-                    data-testid="movie-title"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
-                    ·
-                  </h1>
+                  <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
                   <h1
                     data-testid="movie-release-date"
                     className="font-bold text-[24px] text-[#404040]"
                   >
-                    {utcDate}
+                    {movieInfo.release_date}
                   </h1>
-                  <h1
-                    data-testid="movie-title"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
-                    ·
-                  </h1>
-                  <h1
-                    data-testid="movie-release-date"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
+                  <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
+                  <h1 className="font-bold text-[24px] text-[#404040]">
                     PG-13
                   </h1>
-                  <h1
-                    data-testid="movie-title"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
-                    ·
-                  </h1>
+                  <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
                   <h1
                     data-testid="movie-runtime"
                     className="font-bold text-[24px] text-[#404040] p-0 m-0"

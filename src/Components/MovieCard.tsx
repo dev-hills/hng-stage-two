@@ -16,7 +16,10 @@ type MovieProps = {
 const MovieCard = ({ title, id, image, genre, date }: MovieProps) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
   return (
-    <div className="flex flex-col text-black w-[250px]">
+    <div
+      className="flex flex-col text-black w-[250px]"
+      data-testid="movie-card"
+    >
       {isBookmarked ? (
         <div
           className="rounded-full p-[5px] bg-[#F3F4F680] flex items-center absolute ml-[205px] mt-[10px]"

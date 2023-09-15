@@ -68,7 +68,6 @@ const MovieGrid = () => {
                   <div key={index}>
                     <div className="flex flex-row">
                       <MovieCard
-                        data-testid="movie-card"
                         image={item.poster_path}
                         title={item.title}
                         id={item.id}
