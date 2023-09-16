@@ -157,7 +157,7 @@ const MovieDetail = () => {
                     data-testid="movie-runtime"
                     className="font-bold text-[24px] text-[#404040] p-0 m-0"
                   >
-                    {movieInfo.runtime} Minutes
+                    {movieInfo.runtime}
                   </h1>
                   <div className="flex flex-row items-center gap-[10px]">
                     <div className="text-[#BE123C] w-[85px] h-[30px] border-[1px] border-[#F8E7EB] flex items-center justify-center rounded-[15px]">
