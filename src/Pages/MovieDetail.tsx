@@ -135,30 +135,30 @@ const MovieDetail = () => {
             <div className="flex flex-row py-[31px]">
               <div className="flex flex-col gap-[25px]">
                 <div className="flex flex-row items-center gap-[10px] sm:flex-col sm:items-start">
-                  <h1
-                    data-testid="movie-title"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
-                    {movieInfo.title}
-                  </h1>
+                  <div className="font-bold text-[24px] text-[#404040]">
+                    <h1 data-testid="movie-title">{movieInfo.title}</h1>
+                  </div>
+
                   <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
-                  <h1
-                    data-testid="movie-release-date"
-                    className="font-bold text-[24px] text-[#404040]"
-                  >
-                    {movieInfo.release_date}
-                  </h1>
+
+                  <div className="font-bold text-[24px] text-[#404040]">
+                    <h1 data-testid="movie-release-date">
+                      {movieInfo.release_date}
+                    </h1>
+                  </div>
+
                   <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
+
                   <h1 className="font-bold text-[24px] text-[#404040]">
                     PG-13
                   </h1>
+
                   <h1 className="font-bold text-[24px] text-[#404040]">·</h1>
-                  <h1
-                    data-testid="movie-runtime"
-                    className="font-bold text-[24px] text-[#404040] p-0 m-0"
-                  >
-                    {movieInfo.runtime}
-                  </h1>
+
+                  <div className="font-bold text-[24px] text-[#404040] p-0 m-0">
+                    <h1 data-testid="movie-runtime">{movieInfo.runtime}</h1>
+                  </div>
+
                   <div className="flex flex-row items-center gap-[10px]">
                     <div className="text-[#BE123C] w-[85px] h-[30px] border-[1px] border-[#F8E7EB] flex items-center justify-center rounded-[15px]">
                       Action
@@ -168,23 +168,23 @@ const MovieDetail = () => {
                     </div>
                   </div>
                 </div>
-                <p
-                  data-testid="movie-overview"
-                  className="font-medium text-[17px] text-[#404040] w-[900px] sm:w-auto"
-                >
-                  {movieInfo.overview}
-                </p>
+
+                <div className="font-medium text-[17px] text-[#404040] w-[900px] sm:w-auto">
+                  <p data-testid="movie-overview">{movieInfo.overview}</p>
+                </div>
 
                 <div className="flex flex-col gap-[31px]">
                   <p className="font-normal text-[20px] text-[#333333]">
                     Director: <span className="text-[#BE123C]">{director}</span>
                   </p>
+
                   <p className="font-normal text-[20px] text-[#333333]">
                     Writers:{" "}
                     <span className="text-[#BE123C]">
                       {writer1}, {writer2}, {writer3}
                     </span>
                   </p>
+
                   <p className="font-normal text-[20px] text-[#333333]">
                     Stars:{" "}
                     <span className="text-[#BE123C]">

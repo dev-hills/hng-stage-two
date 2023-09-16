@@ -16,49 +16,54 @@ type MovieProps = {
 const MovieCard = ({ title, id, image, genre, date }: MovieProps) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
   return (
-    <div
-      className="flex flex-col text-black w-[250px]"
-      data-testid="movie-card"
-    >
-      {isBookmarked ? (
-        <div
-          className="rounded-full p-[5px] bg-[#F3F4F680] flex items-center absolute ml-[205px] mt-[10px]"
-          onClick={() => setIsBookmarked(!isBookmarked)}
-        >
-          <img src={Heart2} alt="" width={30} className=" " />
+    <Link to={`/movies/${id}`}>
+      <div
+        data-testid="movie-card"
+        className="flex flex-col text-black w-[250px]"
+      >
+        <div>
+          {isBookmarked ? (
+            <div
+              className="rounded-full p-[5px] bg-[#F3F4F680] flex items-center absolute ml-[205px] mt-[10px]"
+              onClick={() => setIsBookmarked(!isBookmarked)}
+            >
+              <img src={Heart2} alt="" width={30} className=" " />
+            </div>
+          ) : (
+            <div
+              className="rounded-full p-[5px] bg-[#F3F4F680] flex items-center absolute ml-[205px] mt-[10px]"
+              onClick={() => setIsBookmarked(!isBookmarked)}
+            >
+              <img src={Heart1} alt="" width={30} className=" " />
+            </div>
+          )}
         </div>
-      ) : (
-        <div
-          className="rounded-full p-[5px] bg-[#F3F4F680] flex items-center absolute ml-[205px] mt-[10px]"
-          onClick={() => setIsBookmarked(!isBookmarked)}
-        >
-          <img src={Heart1} alt="" width={30} className=" " />
+
+        <div data-testid="movie-poster">
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${image}`}
+            alt=""
+            width={250}
+          />
         </div>
-      )}
-      <Link to={`/movies/${id}`}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${image}`}
-          alt=""
-          width={250}
-          data-testid="movie-poster"
-        />
-      </Link>
-      <div className="bg-white text-black w-[250px] font-main  pt-[12px]">
+
         <p
-          className="font-DM font-bold text-[12px] text-[#9CA3AF]"
           data-testid="movie-release-date"
+          className="font-DM font-bold text-[12px] text-[#9CA3AF] pt-[10px]"
         >
           {date}
         </p>
+
         <div
-          className="text-[20px] font-DM font-bold text-black"
           data-testid="movie-title"
+          className="text-[20px] font-DM font-bold text-black"
         >
           {title}
         </div>
+
         <p className="font-DM font-bold text-[12px] text-[#9CA3AF]">{genre}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
